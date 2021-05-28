@@ -1,0 +1,76 @@
+@import "~bootstrap/scss/bootstrap";
+
+
+$primary: #0074d9;
+
+h1 {
+  text-transform:  uppercase;
+}
+
+.registration {
+  max-width: 800px;
+  min-width: 320px;
+  width: 100%;
+
+  @include media-breakpoint-down(md) {
+    padding: 20px;
+  }
+
+  sup {
+    color: red;
+  }
+
+  .was-validated .form-control-password:invalid,
+  .was-validated .form-control-password:valid,
+  .form-control-password.is-invalid,
+  .form-control-password.is-valid {
+    background-position: right calc(2em + 0.1875rem) center;
+  }
+
+  input,
+  select {
+    cursor: pointer;
+    transition: $transition-base;
+    -webkit-appearance: none;
+
+    &:hover {
+      border-color: grey;
+    }
+  }
+
+  .form-check-label {
+    cursor: pointer;
+    transition: $transition-fade;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .btn {
+    @include media-breakpoint-up(md) {
+      width: calc(50% - 0.25rem);
+
+    }
+  }
+}
+
+
+.password-control {
+  position: absolute;
+  top: 50%;
+  top: 20px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/view.svg") 0 0 no-repeat;
+  transition: $transition-fade;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.password-control.view {
+  background: url("../img/no-view.svg") 0 0 no-repeat;
+}

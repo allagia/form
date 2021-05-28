@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+</head>
+<body>
+  <header></header>
+
+  <main class="main d-flex justify-content-center">
+
+    <section class="registration px-md-5 py-5">
+
+      <form class="needs-validation px-sm-4 px-2 py-4 shadow-lg rounded" method="POST" novalidate>
+
+        <h1 class="text-center mb-4">Форма регистрации</h1>
+
+        <div class="row gx-2 gy-2 mb-4">
+          <div class="col-md-6 form-floating">
+            <input class="form-control bg-light" type="text" id="second-name" placeholder="Укажите Вашу фамилию" required>
+            <label for="second-name">Фамилия<sup>*</sup></label>
+            <div class="invalid-feedback">
+              Укажите Вашу фамилию
+            </div>
+          </div>
+          <div class="col-md-6 form-floating">
+            <input class="form-control bg-light" type="text" id="first-name" placeholder="Укажите Ваше имя" required>
+            <label for="first-name">Имя<sup>*</sup></label>
+            <div class="invalid-feedback">
+              Укажите Ваше имя
+            </div>
+          </div>
+          <div class="col-md-6 form-floating">
+            <input class="form-control bg-light" type="text" id="patronymic" placeholder="Укажите Ваше Отчество">
+            <label for="patronymic">Отчество</label>
+          </div>
+          <div class="col-md-6 form-floating">
+            <input class="form-control bg-light" type="date" id="birthdate" placeholder="dd.mm.yyyy" pattern="(^(((0[1-9]|1[0-9]|2[0-8])[\.](0[1-9]|1[012]))|((29|30|31)[\.](0[13578]|1[02]))|((29|30)[\.](0[4,6,9]|11)))[\.](19|[2-9][0-9])\d\d$)|(^29[\/]02[\.](19|[2-9][0-9])(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)" required>
+            <label for="birthdate">Дата рождения<sup>*</sup></label>
+            <div class="invalid-feedback">
+              Укажите дату Вашего рождения в формате dd.mm.yyyy
+            </div>
+          </div>
+        </div>
+
+        <div class="row gx-2 gy-2 mb-4">
+          <div class="col-md-6 form-floating">
+            <input class="form-control bg-light" type="email" id="email" placeholder="example@example.com" required>
+            <label for="email">Эл. почта<sup>*</sup></label>
+            <div class="invalid-feedback">
+              Укажите Вашу эл.почту в формате example@example.com
+            </div>
+          </div>
+          <div class="col-md-6 form-floating">
+            <input class="form-control bg-light" type="tel" id="phone" placeholder="Укажите Ваш телефон" required>
+            <label for="phone">Телефон<sup>*</sup></label>
+            <div class="invalid-feedback">
+              Укажите номер телефона
+            </div>
+          </div>
+          <div class="col-md-6 form-floating">
+            <input class="form-control bg-light" type="text" id="city" placeholder="Укажите Ваш город" required>
+            <label for="city">Город<sup>*</sup></label>
+            <div class="invalid-feedback">
+              Укажите город
+            </div>
+          </div>
+          <div class="col-md-6 form-floating">
+            <input class="form-control bg-light" type="text" id="address" placeholder="Укажите Ваш адрес" required>
+            <label for="address">Адрес<sup>*</sup></label>
+            <div class="invalid-feedback">
+              Укажите Ваш адрес
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row gx-2 gy-2 mb-4">
+          <div class="col-md-6 form-floating">
+            <input class="form-control form-control-password bg-light" type="password" id="password-1" placeholder="Придумайте пароль" required>
+            <label for="password-1">Пароль<sup>*</sup></label>
+            <a class="password-control" href="#"></a>
+            <div class="invalid-feedback">
+              Придумайте пароль для Вашего аккаунта
+            </div>
+          </div>
+          <div class="col-md-6 form-floating">
+            <input class="form-control form-control-password bg-light" type="password" id="password-2" placeholder="Введите пароль повторно" required>
+            <label for="password-2">Подтвердите пароль<sup>*</sup></label>
+            <a class="password-control" href="#"></a>
+            <div class="invalid-feedback">
+              Необходимо указать пароль ещё раз
+            </div>
+          </div>
+        </div>
+        <div class="row gx-2 gy-2 mb-4">
+          <div class="col-md-6 form-floating">
+            <select class="form-select bg-light" id="secret" required>
+              <option value="" selected>Выберите вопрос</option>
+              <option value="1">Марка вашего первого автомобиля</option>
+              <option value="2">Девичья фамилия матери</option>
+            </select>
+            <label for="secret">Секретный вопрос<sup>*</sup></label>
+            <div class="invalid-feedback">
+              Необходимо выбрать один из вариантов
+            </div>
+          </div>
+          <div class="col-md-6 form-floating">
+            <input class="form-control bg-light" type="text" id="answer" placeholder="ответ на вопрос" required>
+            <label for="answer">Ответ на секретный вопрос<sup>*</sup></label>
+            <div class="invalid-feedback">
+              Необходимо вписать ответ на секретный вопрос
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid d-md-flex">
+          <button class="btn btn-lg btn-primary me-md-2 mb-2" type="submit">Регистрация</button>
+          <button class="btn btn-lg btn-outline-primary mb-2" type="reset">Отмена</button>
+        </div>
+
+
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="checkbox-id" value="" checked required>
+          <label for="checkbox-id" class="form-check-label"><small>Нажимая кнопку «Регистрация» я соглашаюсь с политикой конфиденциальности</small></label>
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer></footer>
+</body>
+</html>
